@@ -763,13 +763,13 @@ elif page == "The Opportunity":
         <div style="margin-top:1.5rem;padding:1.2rem 1.5rem;background:{SURFACE};
                     border:1px solid #e8e4dc;border-top:2px solid {GOLD};">
             <div style="font-family:'Cormorant Garamond',serif;font-size:0.8rem;
-                        color:{DIM2};letter-spacing:0.1em;text-transform:uppercase;
+                        color:{GOLD};letter-spacing:0.1em;text-transform:uppercase;
                         margin-bottom:0.5rem;">Pilot — The Scent of Lahore</div>
             <div style="font-family:'Montserrat',sans-serif;font-size:0.75rem;
                         color:{DIM};line-height:1.8;">
-                Estimated cost: <span style="color:{GOLD};">$18,000–25,000 USD</span><br>
-                Production run: 200–300 units<br>
-                Pakistan premium fragrance market: <span style="color:{GOLD};">$500M+</span>
+                Estimated cost: <span style="color:{GOLD};">$35,000–55,000 USD</span><br>
+                Estimated cost per bottle: $75 - $120 <br>
+                Average luxury fragrance price (PKR): <span style="color:{GOLD};">$100+</span>
             </div>
         </div>
         """,
@@ -777,9 +777,9 @@ elif page == "The Opportunity":
         )
 
 st.markdown(
-    f'<div style="text-align:center;color:{DIM2};font-size:0.65rem;'
+    f'<div style="text-align:center;color:{GOLD};font-size:0.65rem;'
     f"font-family:'Montserrat',sans-serif;margin-top:3rem;"
     f'letter-spacing:0.1em;font-style:italic;">'
-    f"ATLAS · L'Oréal Brandstorm 2026 · Haisam Abbas</div>",
+    f"ATLAS · L'Oréal Brandstorm 2026 · Haisam Abbas, Laima Imran, Danish Raza</div>",
     unsafe_allow_html=True,
 )
