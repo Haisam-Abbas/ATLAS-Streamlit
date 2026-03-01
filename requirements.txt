@@ -4,4 +4,3 @@ numpy
 matplotlib
 folium
 streamlit-folium
-base64
