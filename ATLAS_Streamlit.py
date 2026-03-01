@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 import base64
+import requests
 
 
 # ── Colors ────────────────────────────────────────────────────────────────────
@@ -40,6 +41,11 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 # ── Top Right Logo ───────────────────────────────────────────────────────────
+@st.cache_data
+def load_notes():
+    url = "https://raw.githubusercontent.com/Haisam-Abbas/ATLAS-Streamlit/main/all_notes_freq.json"
+    return requests.get(url).json()
+ALL_NOTES_FREQ = load_notes()
 
 st.markdown(
     """
@@ -153,35 +159,9 @@ def load_csv():
 df = load_csv()
 
 TOTAL_PERFUMES = 1571
-TOTAL_NOTES_OCCURRENCES = 12846
+TOTAL_NOTES_OCCURRENCES = sum(ALL_NOTES_FREQ.values())
 
-NOTES_TOP = {
-    "Bergamot": 547,
-    "Patchouli": 540,
-    "Musk": 447,
-    "Jasmine": 438,
-    "Vanilla": 379,
-    "Amber": 353,
-    "Rose": 325,
-    "Cedar": 289,
-    "Sandalwood": 277,
-    "Mandarin Orange": 265,
-    "Orange Blossom": 259,
-    "Vetiver": 215,
-    "Tonka Bean": 182,
-    "Lavender": 174,
-    "Pink Pepper": 173,
-    "Iris": 147,
-    "Pear": 128,
-    "White Musk": 125,
-    "Lily-of-the-Valley": 123,
-    "Ginger": 122,
-    "Lemon": 121,
-    "Leather": 121,
-    "Cardamom": 119,
-    "Benzoin": 118,
-    "Black Currant": 111,
-}
+
 TERRA_NOTES = {
     "Neem": 0,
     "Marigold": 8,
@@ -502,8 +482,8 @@ elif page == "Note Dominance":
         unsafe_allow_html=True,
     )
 
-    notes_sorted = sorted(NOTES_TOP.items(), key=lambda x: x[1], reverse=True)
-    all_counts_n = [v for _, v in notes_sorted]
+    notes_sorted = sorted(ALL_NOTES_FREQ.items(), key=lambda x: x[1], reverse=True)
+    all_vals = [v for _, v in notes_sorted]
     top10_pct = sum(all_counts_n[:10]) / TOTAL_NOTES_OCCURRENCES * 100
 
     c1, c2, c3 = st.columns(3)
