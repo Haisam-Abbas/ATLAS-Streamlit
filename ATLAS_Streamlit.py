@@ -40,39 +40,6 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 # ── Top Right Logo ───────────────────────────────────────────────────────────
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    logo_path = os.path.join(current_dir, "atlas_logo.png")
-    try:
-        with open(logo_path, "rb") as f:
-            return base64.b64encode(f.read()).decode()
-    except:
-        return None
-
-
-logo_base64 = get_base64_of_image()
-
-if logo_base64:
-    st.markdown(
-        f"""
-        <style>
-        header {{visibility: hidden;}}
-        .top-right-logo {{
-            position: fixed;
-            top: 10px;
-            right: 20px;
-            z-index: 999999;
-        }}
-        .top-right-logo img {{
-            width: 300px;
-            height: auto;
-        }}
-        </style>
-        <div class="top-right-logo">
-            <img src="data:image/png;base64,{logo_base64}">
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
 
 st.markdown(
     """
@@ -293,25 +260,17 @@ WESTERN = [
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
-    st.markdown(
-        f"""
-    <div style="padding:1.5rem 0 2rem 0;">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;
-                    color:{GOLD};font-weight:600;letter-spacing:0.1em;">ATLAS</div>
-        <div style="font-size:0.58rem;color:{DIM2};letter-spacing:0.2em;
-                    text-transform:uppercase;margin-top:0.2rem;">
-            The Olfactory Map of the World
-        </div>
-    </div>
-    <hr style="border-color:#e8e4dc;margin-bottom:1.5rem;">
-    """,
-        unsafe_allow_html=True,
-    )
+    st.image("atlas_logo.png", use_container_width=True)
+    st.markdown("---")
 
     page = st.radio(
         "",
         ["The Gap", "World Heatmap", "Note Dominance", "The Opportunity"],
         label_visibility="collapsed",
+    )
+    st.markdown(
+        "<hr style='border-color:#e8e4dc;margin:1.2rem 0 1.5rem 0;'>",
+        unsafe_allow_html=True,
     )
 
     st.markdown(
