@@ -408,6 +408,27 @@ if page == "The Gap":
         """,
             unsafe_allow_html=True,
         )
+        BRANDS = [
+            "Aesop", "Atelier Cologne", "Azzaro", "Diesel", "Giorgio Armani", "Lancome", "Maison Martin Margiela", "Mugler", "Prada", "Ralph Lauren", "Valentino", "Viktor & Rolf", "Yves Saint Laurent"
+
+        ]
+
+        st.markdown(
+            f"""
+        <div style="margin-top:1rem;margin-bottom:1.5rem;">
+            <div style="font-family:'Montserrat',sans-serif;font-size:0.72rem;
+                        color:{DIM2};letter-spacing:0.1em;text-transform:uppercase;
+                        margin-bottom:0.5rem;font-weight:600;">
+                Brands Analyzed
+            </div>
+            <div style="font-family:'Montserrat',sans-serif;font-size:0.68rem;color:{DIM};
+                        line-height:1.6;">
+                {" · ".join(BRANDS)}
+            </div>
+        </div>
+        """,
+            unsafe_allow_html=True,
+        )
 
 # ══════════════════════════════════════════════════════════════════════════════
 # PAGE 2 — WORLD HEATMAP
