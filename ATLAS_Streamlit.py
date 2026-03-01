@@ -44,7 +44,7 @@ st.set_page_config(
 
 @st.cache_data
 def load_notes():
-    url = "https://raw.githubusercontent.com/username/repo/main/all_notes_freq.json"
+    url = "https://raw.githubusercontent.com/Haisam-Abbas/ATLAS-Streamlit/refs/heads/main/all_notes_freq.json"
     r = requests.get(url)
     r.raise_for_status()  # This will alert you if GitHub URL is wrong
     return r.json()
