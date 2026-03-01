@@ -301,8 +301,8 @@ if page == "The Gap":
             The world smells<br>
             <span style="color:{GOLD};">like one place.</span>
         </div>
-        <div style="font-family:'Montserrat',sans-serif;font-size:0.72rem;color:{DIM2};
-                    letter-spacing:0.15em;text-transform:uppercase;margin-top:1rem;">
+        <div style="font-family:'Montserrat',sans-serif;font-size:0.72rem;color:{GOLD};
+                    letter-spacing:0.15em;text-transform:uppercase;margin-top:1rem;font-weight:600;">
             A data analysis of 1,571 L'Oréal Luxe fragrances · 13 brands · 685,000 language vectors
         </div>
     </div>
