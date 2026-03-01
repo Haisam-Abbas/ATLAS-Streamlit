@@ -54,97 +54,123 @@ st.markdown(
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap');
 
-html, body, [class*="css"] { background-color: #ffffff; color: #1a1a1a; }
-.main { background-color: #ffffff; }
-.block-container { 
-    padding-top: 3rem;   /* was 1.5rem */
-    padding-bottom: 2rem; 
-    max-width: 1400px; 
+/* Force consistent background & text colors everywhere */
+html, body, [class*="css"], .main {
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
 }
 
+/* Main block container */
+.block-container { 
+    padding-top: 3rem !important;
+    padding-bottom: 2rem !important;
+    max-width: 1400px !important;
+}
+
+/* Headings & text */
 h1, h2, h3 { font-family: 'Cormorant Garamond', serif !important; color: #1a1a1a !important; }
-p, div, span, label { font-family: 'Montserrat', sans-serif; color: #1a1a1a; }
+p, div, span, label { font-family: 'Montserrat', sans-serif !important; color: #1a1a1a !important; }
 
-[data-testid="stSidebar"] { background-color: #f7f5f0; border-right: 1px solid #e8e4dc; }
-[data-testid="stSidebar"] * { color: #888 !important; font-family: 'Montserrat', sans-serif; }
+/* Sidebar */
+[data-testid="stSidebar"] { background-color: #f7f5f0 !important; border-right: 1px solid #e8e4dc !important; }
+[data-testid="stSidebar"] * { color: #888 !important; font-family: 'Montserrat', sans-serif !important; }
 
+/* Stat cards */
 .stat-card {
-    background: #f7f5f0;
-    border: 1px solid #e8e4dc;
-    border-top: 2px solid #9a6f2e;
-    border-radius: 2px;
-    padding: 1.2rem 1.5rem;
-    text-align: center;
+    background: #f7f5f0 !important;
+    border: 1px solid #e8e4dc !important;
+    border-top: 2px solid #9a6f2e !important;
+    border-radius: 2px !important;
+    padding: 1.2rem 1.5rem !important;
+    text-align: center !important;
 }
 .stat-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.6rem;
-    font-weight: 600;
-    color: #9a6f2e;
-    line-height: 1;
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 2.6rem !important;
+    font-weight: 600 !important;
+    color: #9a6f2e !important;
+    line-height: 1 !important;
 }
 .stat-label {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.62rem;
-    color: #999;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-top: 0.4rem;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.62rem !important;
+    color: #999 !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase !important;
+    margin-top: 0.4rem !important;
 }
-.gold-rule {
-    border: none;
-    border-top: 1px solid #9a6f2e;
-    margin: 0.5rem 0 1.2rem 0;
-    opacity: 0.3;
-}
+
+/* Section titles & subtitles */
 .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #1a1a1a;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.2rem;
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+    color: #1a1a1a !important;
+    letter-spacing: 0.05em !important;
+    margin-bottom: 0.2rem !important;
 }
 .section-sub {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.68rem;
-    color: #aaa;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.68rem !important;
+    color: #aaa !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    margin-bottom: 1rem !important;
 }
+
+/* Insight box */
 .insight-box {
-    background: #f7f5f0;
-    border-left: 2px solid #9a6f2e;
-    padding: 0.9rem 1.3rem;
-    border-radius: 0 4px 4px 0;
-    font-size: 0.78rem;
-    color: #666;
-    line-height: 1.8;
-    margin: 0.8rem 0;
+    background: #f7f5f0 !important;
+    border-left: 2px solid #9a6f2e !important;
+    padding: 0.9rem 1.3rem !important;
+    border-radius: 0 4px 4px 0 !important;
+    font-size: 0.78rem !important;
+    color: #666 !important;
+    line-height: 1.8 !important;
+    margin: 0.8rem 0 !important;
+}
+
+/* City cards & zero-tags */
+.city-card {
+    border-left: 1px solid #e8e4dc !important;
+    padding: 0.7rem 1rem !important;
+    margin-bottom: 0.5rem !important;
+    background: #f7f5f0 !important;
+    border-radius: 0 3px 3px 0 !important;
 }
 .zero-tag {
-    display: inline-block;
-    background: #f7f5f0;
-    border: 1px solid #e8e4dc;
-    color: #bbb;
-    padding: 3px 10px;
-    border-radius: 2px;
-    font-size: 0.7rem;
-    margin: 2px;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 0.05em;
+    display: inline-block !important;
+    background: #f7f5f0 !important;
+    border: 1px solid #e8e4dc !important;
+    color: #bbb !important;
+    padding: 3px 10px !important;
+    border-radius: 2px !important;
+    font-size: 0.7rem !important;
+    margin: 2px !important;
+    font-family: 'Montserrat', sans-serif !important;
+    letter-spacing: 0.05em !important;
 }
-.city-card {
-    border-left: 1px solid #e8e4dc;
-    padding: 0.7rem 1rem;
-    margin-bottom: 0.5rem;
-    background: #f7f5f0;
-    border-radius: 0 3px 3px 0;
+
+/* Horizontal gold rule */
+.gold-rule {
+    border: none !important;
+    border-top: 1px solid #9a6f2e !important;
+    margin: 0.5rem 0 1.2rem 0 !important;
+    opacity: 0.3 !important;
 }
-footer { visibility: hidden; }
-#MainMenu { visibility: hidden; }
-.stDeployButton { display: none; }
+
+/* Footer & Streamlit UI */
+footer { visibility: hidden !important; }
+#MainMenu { visibility: hidden !important; }
+.stDeployButton { display: none !important; }
+
+/* Media query to prevent browser dark mode overrides */
+@media (prefers-color-scheme: dark) {
+    html, body, [class*="css"], .main, .stat-card, .insight-box, .city-card {
+        background-color: #ffffff !important;
+        color: #1a1a1a !important;
+    }
+}
 </style>
 """,
     unsafe_allow_html=True,
