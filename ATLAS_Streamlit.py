@@ -45,7 +45,11 @@ st.markdown(
 
 html, body, [class*="css"] { background-color: #ffffff; color: #1a1a1a; }
 .main { background-color: #ffffff; }
-.block-container { padding-top: 1.5rem; padding-bottom: 2rem; max-width: 1400px; }
+.block-container { 
+    padding-top: 3rem;   /* was 1.5rem */
+    padding-bottom: 2rem; 
+    max-width: 1400px; 
+}
 
 h1, h2, h3 { font-family: 'Cormorant Garamond', serif !important; color: #1a1a1a !important; }
 p, div, span, label { font-family: 'Montserrat', sans-serif; color: #1a1a1a; }
