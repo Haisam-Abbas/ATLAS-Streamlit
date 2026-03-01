@@ -139,9 +139,9 @@ footer { visibility: hidden; }
 # ── Load CSV ──────────────────────────────────────────────────────────────────
 @st.cache_data
 def load_csv():
-    path = r"C:\Users\Haisam.abbas\Code\Fragrantica\kepler_scattered_v5.csv"
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    path = os.path.join(BASE_DIR, "kepler_scattered_v5.csv")
     return pd.read_csv(path)
-
 
 df = load_csv()
 
