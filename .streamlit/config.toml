@@ -1,0 +1,13 @@
+[theme]
+# This is the "kill switch" for brute-force dark mode
+base="light"
+
+# Your ATLAS Brand Colors
+primaryColor="#9a6f2e"          # The ATLAS Gold
+backgroundColor="#ffffff"        # Pure white background
+secondaryBackgroundColor="#f7f5f0" # The Cream surface used in your sidebar/cards
+textColor="#1a1a1a"              # Deep charcoal for readability
+
+[server]
+# Ensures the app doesn't try to "guess" settings based on the user's OS
+headless = true
