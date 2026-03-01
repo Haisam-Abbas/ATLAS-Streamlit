@@ -44,7 +44,7 @@ st.set_page_config(
 
 @st.cache_data
 def load_notes():
-    url = "https://https://raw.githubusercontent.com/Haisam-Abbas/ATLAS-Streamlit/refs/heads/main/all_notes_freq.json"
+    url = "https://raw.githubusercontent.com/Haisam-Abbas/ATLAS-Streamlit/refs/heads/main/all_notes_freq.json"
     try:
         r = requests.get(url, timeout=10)
         r.raise_for_status()
