@@ -401,7 +401,7 @@ if page == "The Gap":
             The industry tells <span style="color:{GOLD};">one story.</span>"
         </div>
         <div style="font-family:'Montserrat',sans-serif;font-size:0.68rem;color:{GOLD};
-                    margin-top:1.2rem;line-height:1.8;font-weight<600>;">
+                    margin-top:1.2rem;line-height:1.8;font-weight<100>;">
             Powered by a custom Python scraper + spaCy NLP (685,000 vectors) applied
             to perfume marketing descriptions across 13 L'Oréal Luxe brand portfolios.
         </div>
@@ -777,7 +777,7 @@ elif page == "The Opportunity":
         )
 
 st.markdown(
-    f'<div style="text-align:center;color:{GOLD};font-size:0.65rem;font-weight<600>;'
+    f'<div style="text-align:center;color:{GOLD};font-size:0.65rem;font-weight<50>;'
     f"font-family:'Montserrat',sans-serif;margin-top:3rem;"
     f'letter-spacing:0.1em;font-style:italic;">'
     f"ATLAS · L'Oréal Brandstorm 2026 · Haisam Abbas, Laima Imran, Danish Raza</div>",
