@@ -37,6 +37,39 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+# ── Top Right Logo ───────────────────────────────────────────────────────────
+def get_base64_of_image():
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    logo_path = os.path.join(current_dir, "atlas_logo.png")
+    try:
+        with open(logo_path, "rb") as f:
+            return base64.b64encode(f.read()).decode()
+    except:
+        return None
+
+logo_base64 = get_base64_of_image()
+
+if logo_base64:
+    st.markdown(
+        f"""
+        <style>
+        header {{visibility: hidden;}}
+        .top-right-logo {{
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            z-index: 999999;
+        }}
+        .top-right-logo img {{
+            width: 70px;
+        }}
+        </style>
+        <div class="top-right-logo">
+            <img src="data:image/png;base64,{logo_base64}">
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 st.markdown(
     """
@@ -446,7 +479,7 @@ elif page == "World Heatmap":
         for _ in range(int(row["count"])):
             heat_data.append([float(row["lat"]), float(row["lng"]), 1])
 
-    m = folium.Map(location=[25.0, 15.0], zoom_start=2, tiles=None, prefer_canvas=True)
+    m = folium.Map(location=[25.0, 15.0], zoom_start=2,min_zoom=2, max_zoom=6,max_bounds=True, tiles=None, prefer_canvas=True)
     folium.TileLayer(
         tiles="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
         attr="CartoDB",
