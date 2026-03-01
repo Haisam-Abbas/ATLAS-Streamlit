@@ -41,10 +41,14 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 # ── Top Right Logo ───────────────────────────────────────────────────────────
+
 @st.cache_data
 def load_notes():
-    url = "https://raw.githubusercontent.com/Haisam-Abbas/ATLAS-Streamlit/main/all_notes_freq.json"
-    return requests.get(url).json()
+    url = "https://raw.githubusercontent.com/username/repo/main/all_notes_freq.json"
+    r = requests.get(url)
+    r.raise_for_status()  # This will alert you if GitHub URL is wrong
+    return r.json()
+
 ALL_NOTES_FREQ = load_notes()
 
 st.markdown(
