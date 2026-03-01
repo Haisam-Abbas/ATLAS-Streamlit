@@ -495,7 +495,7 @@ elif page == "Note Dominance":
 
     notes_sorted = sorted(ALL_NOTES_FREQ.items(), key=lambda x: x[1], reverse=True)
     all_vals = [v for _, v in notes_sorted]
-    top10_pct = sum(all_counts_n[:10]) / TOTAL_NOTES_OCCURRENCES * 100
+    top10_pct = sum(all_vals[:10]) / TOTAL_NOTES_OCCURRENCES * 100
 
     c1, c2, c3 = st.columns(3)
     for col, num, label in [
@@ -564,8 +564,8 @@ elif page == "Note Dominance":
             unsafe_allow_html=True,
         )
 
-        # Build full sorted counts for pareto (use NOTES_TOP as proxy)
-        all_vals = sorted(NOTES_TOP.values(), reverse=True)
+        # Build full sorted counts for pareto (use ALL_Notes as proxy)
+        all_vals = sorted(ALL_NOTES_FREQ.values(), reverse=True)
         total_occ = TOTAL_NOTES_OCCURRENCES
         cum_pct = np.cumsum(all_vals) / total_occ * 100
         x_range = np.arange(1, len(all_vals) + 1)
