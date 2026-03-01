@@ -40,7 +40,6 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 # ── Top Right Logo ───────────────────────────────────────────────────────────
-def get_base64_of_image():
     current_dir = os.path.dirname(os.path.abspath(__file__))
     logo_path = os.path.join(current_dir, "atlas_logo.png")
     try:
@@ -48,6 +47,7 @@ def get_base64_of_image():
             return base64.b64encode(f.read()).decode()
     except:
         return None
+
 
 logo_base64 = get_base64_of_image()
 
@@ -63,7 +63,8 @@ if logo_base64:
             z-index: 999999;
         }}
         .top-right-logo img {{
-            width: 70px;
+            width: 300px;
+            height: auto;
         }}
         </style>
         <div class="top-right-logo">
