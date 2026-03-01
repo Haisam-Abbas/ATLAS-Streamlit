@@ -283,7 +283,7 @@ with st.sidebar:
     <hr style="border-color:#e8e4dc;margin-top:2rem;">
     <div style="font-size:0.58rem;color:{DIM2};letter-spacing:0.1em;
                 text-transform:uppercase;padding-top:1rem;line-height:2.2;">
-        L'Oréal Brandstorm 2026<br>1,571 fragrances analyzed<br>13 L'Oréal Luxe brands
+        L'Oréal Brandstorm 2026<br>1,571 fragrances analyzed<br>13 L'Oréal Luxe brands<br>Team ATLAS
     </div>
     """,
         unsafe_allow_html=True,
@@ -400,8 +400,8 @@ if page == "The Gap":
             "Fragrance is 4,000 years old.<br>
             The industry tells <span style="color:{GOLD};">one story.</span>"
         </div>
-        <div style="font-family:'Montserrat',sans-serif;font-size:0.68rem;color:{DIM2};
-                    margin-top:1.2rem;line-height:1.8;">
+        <div style="font-family:'Montserrat',sans-serif;font-size:0.68rem;color:{GOLD};
+                    margin-top:1.2rem;line-height:1.8;font-weight<600>;">
             Powered by a custom Python scraper + spaCy NLP (685,000 vectors) applied
             to perfume marketing descriptions across 13 L'Oréal Luxe brand portfolios.
         </div>
@@ -769,7 +769,7 @@ elif page == "The Opportunity":
                         color:{DIM};line-height:1.8;">
                 Estimated cost: <span style="color:{GOLD};">$35,000–55,000 USD</span><br>
                 Estimated cost per bottle: $75 - $120 <br>
-                Average luxury fragrance price (PKR): <span style="color:{GOLD};">$100+</span>
+                Average luxury fragrance price: <span style="color:{GOLD};">$100+</span>
             </div>
         </div>
         """,
@@ -777,7 +777,7 @@ elif page == "The Opportunity":
         )
 
 st.markdown(
-    f'<div style="text-align:center;color:{GOLD};font-size:0.65rem;'
+    f'<div style="text-align:center;color:{GOLD};font-size:0.65rem;font-weight<600>;'
     f"font-family:'Montserrat',sans-serif;margin-top:3rem;"
     f'letter-spacing:0.1em;font-style:italic;">'
     f"ATLAS · L'Oréal Brandstorm 2026 · Haisam Abbas, Laima Imran, Danish Raza</div>",
