@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 import base64
-import requests
+
 
 
 # ── Colors ────────────────────────────────────────────────────────────────────
@@ -44,18 +44,10 @@ st.set_page_config(
 
 @st.cache_data
 def load_notes():
-    url = "https://raw.githubusercontent.com/Haisam-Abbas/ATLAS-Streamlit/refs/heads/main/all_notes_freq.json"
-    try:
-        r = requests.get(url, timeout=10)
-        r.raise_for_status()
-        data = r.json()
-        if not isinstance(data, dict):
-            st.error("GitHub JSON did not return a dictionary!")
-            return {}
-        return data
-    except Exception as e:
-        st.error(f"Failed to load notes from GitHub: {e}")
-        return {}
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    path = os.path.join(BASE_DIR, "all_notes_freq.csv")
+    df_notes = pd.read_csv(path)
+    return dict(zip(df_notes["note"], df_notes["count"]))
 
 st.markdown(
     """
