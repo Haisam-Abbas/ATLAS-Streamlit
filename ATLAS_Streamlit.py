@@ -35,7 +35,7 @@ plt.rcParams.update(
 )
 
 st.set_page_config(
-    page_title="ATLAS — The Olfactory Map of the World",
+    page_title="ATLAS — The Scent of the World",
     page_icon="🌍",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -191,7 +191,7 @@ ALL_NOTES_FREQ = load_notes()
 TOTAL_NOTES_OCCURRENCES = sum(ALL_NOTES_FREQ.values())
 
 
-TERRA_NOTES = {
+Unused = {
     "Neem": 0,
     "Marigold": 8,
     "Turmeric": 1,
@@ -683,7 +683,7 @@ elif page == "Note Dominance":
 elif page == "The Opportunity":
     st.markdown(
         f'<div class="section-title">ATLAS</div>'
-        f'<div class="section-sub">The Olfactory Map of the World · L\'Oréal Brandstorm 2026</div>'
+        f'<div class="section-sub">An Olfactory Map of the World · L\'Oréal Brandstorm 2026</div>'
         f'<hr class="gold-rule">',
         unsafe_allow_html=True,
     )
@@ -704,7 +704,7 @@ elif page == "The Opportunity":
         )
 
         for city, notes in [
-            ("The Scent of Lahore", "Marigold · Neem · Attar · Petrichor on red earth"),
+            ("The Scent of Lahore", "Gulkand · Spices · Kulfi · Petrichor on red earth"),
             (
                 "The Scent of Marrakech",
                 "Bukhoor · Rose de Taif · Atlas Cedar · Spice Market",
@@ -753,7 +753,7 @@ elif page == "The Opportunity":
             (
                 "03",
                 "Create",
-                "Co-develop with regional artisan perfumers. Made by the people who live the scent.",
+                "Co-develop with regional artisan perfumers. In collaboration with the people who live the scent.",
             ),
             (
                 "04",
