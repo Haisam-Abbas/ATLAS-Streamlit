@@ -302,8 +302,8 @@ if page == "The Gap":
     <div style="padding:1rem 0 0.5rem 0;">
         <div style="font-family:'Cormorant Garamond',serif;font-size:3.2rem;
                     font-weight:700;color:{CREAM};line-height:1.1;">
-            The world smells<br>
-            <span style="color:{GOLD};">like one place.</span>
+            ATLAS<br>
+            <span style="color:{GOLD};">The Data Behind The Dream.</span>
         </div>
         <div style="font-family:'Montserrat',sans-serif;font-size:0.72rem;color:{GOLD};
                     letter-spacing:0.15em;text-transform:uppercase;margin-top:1rem;font-weight:600;">
