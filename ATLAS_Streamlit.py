@@ -273,9 +273,9 @@ with st.sidebar:
     st.markdown("---")
 
     page = st.radio(
-        "",
+        "Navigation",
         ["The Gap", "World Heatmap", "Note Dominance", "The Opportunity"],
-        label_visibility="collapsed",
+        label_visibility="hidden",
     )
     st.markdown(
         "<hr style='border-color:#e8e4dc;margin:1.2rem 0 1.5rem 0;'>",
