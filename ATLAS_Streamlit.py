@@ -172,7 +172,17 @@ footer { visibility: hidden !important; }
         color: #1a1a1a !important;
     }
 }
-
+/* --- Fix collapsed sidebar toggle button --- */
+[data-testid="collapsedControl"] span {
+    font-family: 'Material Icons' !important;
+    font-size: 24px !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+    white-space: nowrap !important;
+    direction: ltr !important;
+}
 </style>
 """,
     unsafe_allow_html=True,
