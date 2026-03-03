@@ -73,8 +73,23 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif !important; color: #1a1a1a
 p, div, label { font-family: 'Montserrat', sans-serif !important; color: #1a1a1a !important; }
 
 /* Sidebar */
-[data-testid="stSidebar"] { background-color: #f7f5f0 !important; border-right: 1px solid #e8e4dc !important; }
-[data-testid="stSidebar"] * { color: #888 !important; font-family: 'Montserrat', sans-serif !important; }
+[data-testid="stSidebar"] { 
+    background-color: #f7f5f0 !important; 
+    border-right: 1px solid #e8e4dc !important; 
+}
+
+/* Target only text elements, preserving icons */
+[data-testid="stSidebarNav"] span, 
+[data-testid="stSidebar"] .stMarkdown p, 
+[data-testid="widget-label"] { 
+    color: #888 !important; 
+    font-family: 'Montserrat', sans-serif !important; 
+}
+
+/* Ensure the collapse icon remains visible and functional */
+[data-testid="stSidebar"] button [data-testid="stIcon"] {
+    color: #9a6f2e !important; /* Optional: Give the arrow your Gold color */
+}
 
 /* Stat cards */
 .stat-card {
