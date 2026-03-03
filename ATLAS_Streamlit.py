@@ -70,7 +70,7 @@ html, body, [class*="css"], .main {
 
 /* Headings & text */
 h1, h2, h3 { font-family: 'Cormorant Garamond', serif !important; color: #1a1a1a !important; }
-p, div, span, label { font-family: 'Montserrat', sans-serif !important; color: #1a1a1a !important; }
+p, div, label { font-family: 'Montserrat', sans-serif !important; color: #1a1a1a !important; }
 
 /* Sidebar */
 [data-testid="stSidebar"] { background-color: #f7f5f0 !important; border-right: 1px solid #e8e4dc !important; }
